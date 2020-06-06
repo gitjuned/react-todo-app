@@ -11,12 +11,8 @@ export default function Todo({ item, handleDelete, handleCheck }) {
         onChange={() => handleCheck(item.value)}
       />
       <label htmlFor={item.value}>{item.value}</label>
-      <button>
-        <img
-          onClick={() => handleDelete(item.value)}
-          src={CloseIcon}
-          alt="close-icon"
-        />
+      <button onClick={() => handleDelete(item.value)}>
+        <img src={CloseIcon} alt="close-icon" />
       </button>
     </div>
   );
